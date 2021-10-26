@@ -1,0 +1,28 @@
+/* Disabled width for new one column format */
+/* td { width: 7cm; } */
+/* For one column format.  */
+/* td { width: 10.5cm; white-space: nowrap; } */
+h2 { font-size: 15pt; margin-top: 8px; margin-bottom: 8px; }
+h3 { font-size: 11pt; font-weight: normal; margin-top: 0.5em; margin-bottom: 0.5em; }
+h4 { font-size: 11pt; font-weight: normal; margin-top: 0.0em; margin-bottom: 0.0em; }
+
+p.summary { text-align: center; margin-top: 0.5em; margin-bottom: 0.5em; font-size: 12pt; }
+ul { font-size: 11pt; font-weight: normal; margin-top: 0em; margin-bottom: 0em; padding-left: 17px; padding-right: 0px }
+li { padding-left: 0px; padding-top: 2px }
+table { font-size: 12pt }
+
+
+
+
+/* samp { font-size: 9pt; background-color: #dcdde1; padding: 5px } */
+/*p, li { max-width: 60em; }*/
+/* table, td, th { border: 1px black solid; border-collapse: collapse; */
+/*                 padding: 0.3em; } */
+/* td[hl=bad] { background-color: #ee5253 } */
+/* td[hl=better] { background-color: #A5F28F } */
+/* mark { background-color: #ee5253 } */
+/* thead { text-align: center; font-weight: bold; */
+/*         background-color: #0abde3 } */
+/* tbody th { text-align: left; } */
+/* tbody td { text-align: center; } */
+/* ol { margin-top: 0; margin-bottom: 0; } */
