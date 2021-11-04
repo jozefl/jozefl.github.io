@@ -189,13 +189,11 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
 </style>
-<link rel="stylesheet" type="text/css" href="portfolio.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="main.css"/>
 </head>
 <body>
-<div id="preamble" class="status">
-<link rel="import" href="nav.html"/>
-</div>
 <div id="content" class="content">
 <h1 class="title">Jozef Lawrynowicz</h1>
 
@@ -208,103 +206,148 @@
 <col  class="org-left">
 
 <col  class="org-left">
-
-<col  class="org-left">
 </colgroup>
 <tbody>
 <tr>
 <td class="org-left"><a href="index.html">Resume</a></td>
 <td class="org-left"><a href="portfolio.html">Portfolio</a></td>
 <td class="org-left"><a href="mailto:jozef.lawrynowicz@gmail.com">jozef.lawrynowicz@gmail.com</a></td>
-<td class="org-left"><a href="Jozef_Lawrynowicz_Resume.pdf">PDF Resume</a></td>
 </tr>
 </tbody>
 </table>
-<div id="outline-container-org46b871d" class="outline-2">
-<h2 id="org46b871d">Coding</h2>
-<div class="outline-text-2" id="text-org46b871d">
+<div id="outline-container-org0adebe8" class="outline-2">
+<h2 id="org0adebe8">Mitto Systems and MSP430-GCC</h2>
+<div class="outline-text-2" id="text-org0adebe8">
+<hr>
+<p>
+I founded Mitto Systems in January 2018, and worked on the Texas Instruments
+<a href="https://www.ti.com/tool/MSP430-GCC-OPENSOURCE">MSP430-GCC project</a>, a downstream fork of the MSP430 GNU toolchain, through this
+company. Over the 3 years I led the project, I delivered 9 releases to TI,
+spanning GCC versions 7 to 9. Each release of MSP430-GCC was available alongside
+the TI toolchain in the Code Composer Studio IDE, and also available standalone.
+</p>
+
+<p>
+The goals of the project were to keep the toolchain up to date with
+the latest versions of upstream GCC, Binutils, and GDB, whilst improving code
+generation, with a focus on reducing the size of generated code. Regular contact
+with customers on the TI e2e forums helped me stay up to date with issues faced
+by them, helping to prioritize tasks for releases.
+</p>
+
+<p>
+Code generation improvements and optimizations across the compiler,
+linker and runtime libraries delivered an average code size reduction
+of 35%, achieved with the final release. Performance, as measured by
+EEMBC CoreMark score, increased by 10%.
+</p>
+
+<p>
+I used Git subtrees to manage the downstream toolchain in a single repository,
+enabling different versions of the toolchain components to be maintained, and
+pulled in the latest upstream releases as required.
+</p>
+
+<p>
+I built a CI system using Buildbot, to automatically build, test, benchmark and
+package the toolchain for Windows, macOS and Linux.
+</p>
+
+<p>
+I contributed over 150 patches upstream, across the open source GNU toolchain,
+adding new features, fixing bugs and improving MSP430 code generation across
+all the toolchain components.
+</p>
 </div>
-<div id="outline-container-orgc290983" class="outline-3">
-<h3 id="orgc290983"><a href="https://gcc.gnu.org/git/?p=gcc.git;a=search;h=HEAD;s=Jozef+Lawrynowicz;st=author">GCC Commits</a></h3>
-<div class="outline-text-3" id="text-orgc290983">
+</div>
+<div id="outline-container-orgc271a9a" class="outline-2">
+<h2 id="orgc271a9a">Coding and Open Source Contributions</h2>
+<div class="outline-text-2" id="text-orgc271a9a">
+<hr>
+<p>
+<a href="https://github.com/jozefl/msp430-llvm">MSP430-LLVM</a> is a fork of LLVM used as a staging area for MSP430-specific patches
+I developed, whilst they await review for inclusion into the upstream LLVM project.
+I implemented:
+</p>
 <ul class="org-ul">
-<li>My GCC contributions are focused on MSP430-specific improvements and
-bug fixes, including the implementation of an instruction cost model, and
-improvements to instruction selection.</li>
+<li><a href="https://github.com/jozefl/msp430-llvm/commit/3bf2a4487503fb7f2080032f245d2734ee1d74d8">a new method</a> for efficiently extracting the CPU and hardware multiply version
+supported by specific MSP430 MCUs</li>
+<li><a href="https://github.com/jozefl/msp430-llvm/commit/5973c0c5b784b059b960f1fe439ad76975694a11">a series</a> <a href="https://github.com/jozefl/msp430-llvm/commit/ea81f1c597b4f849b67735b7e3ccb9ce487a07f6">of</a> <a href="https://github.com/jozefl/msp430-llvm/commit/05053b84e0ba7cf80313e8a0b9453d6133ea84e0">patches</a> to add codegen and assembler support for MSP430X shift instructions</li>
+<li><a href="https://github.com/jozefl/msp430-llvm/commit/e22f6a769b6bc0f357a64e48cde772893035ff9b">a patch</a> to add codegen and assembler support for MSP430X push/pop instructions.</li>
 </ul>
-</div>
-</div>
-<div id="outline-container-org44b1295" class="outline-3">
-<h3 id="org44b1295"><a href="https://sourceware.org/git/?p=binutils-gdb.git;a=search;h=HEAD;s=Jozef+Lawrynowicz;st=author">Binutils/GDB Commits</a></h3>
-<div class="outline-text-3" id="text-org44b1295">
-<ul class="org-ul">
-<li>My Binutils contributions include the implementation of the SHF_GNU_RETAIN ELF
-symbol flag and enhancements to MSP430 linker relocation processing.</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org621d762" class="outline-3">
-<h3 id="org621d762"><a href="https://sourceware.org/git/?p=newlib-cygwin.git;a=search;h=HEAD;s=Jozef+Lawrynowicz;st=author">Newlib Commits</a></h3>
-<div class="outline-text-3" id="text-org621d762">
-<ul class="org-ul">
-<li>My Newlib contributions include the implementation of a reduced code-size
-&ldquo;printf&rdquo; for MSP430, improvements to the MSP430 CRT library, and maintenance
-of libm.</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org9fc1315" class="outline-3">
-<h3 id="org9fc1315"><a href="https://github.com/jozefl/msp430-llvm">MSP430-LLVM</a></h3>
-<div class="outline-text-3" id="text-org9fc1315">
-<ul class="org-ul">
-<li>This fork of LLVM is a staging area for MSP430-specific patches I developed,
-whilst they await review for inclusion into the main LLVM project.</li>
-<li>The patches awaiting review can also be viewed on the <a href="https://reviews.llvm.org/people/revisions/22509/">LLVM Phabricator instance</a>.</li>
-</ul>
-</div>
+
+<p>
+My GCC contributions include improvements to <a href="https://gcc.gnu.org/git/?p=gcc.git;a=commitdiff;h=a0a9a3fc22d4d4a38c1d6a31669c926734308745">instruction selection in the MSP430
+backend</a>, development of <a href="https://gcc.gnu.org/git/?p=gcc.git;a=commitdiff;h=8682b1a508e5ba9bd2e1b2b4d298bf7d07a37f80">a new MSP430 data model</a> and the implementation of
+<a href="https://gcc.gnu.org/git/?p=gcc.git;a=commitdiff;h=0fcc78f79e85b816480e0425cc8d7c496e739e88">highly-optimized MSP430 assembly code library routines</a> for performing 64-bit
+multiplication.
+</p>
+
+<p>
+My Binutils contributions include the design and implementation of the
+<a href="https://sourceware.org/git/?p=binutils-gdb.git;a=commitdiff;h=99fabbc9739a87ba3433e66792e93b773896790e">SHF_GNU_RETAIN ELF section flag</a> and fixes to <a href="https://sourceware.org/git/?p=binutils-gdb.git;a=commitdiff;h=8d6cb116f47b5edb2a7c2fa540fcb9dbcd3effc2">MSP430 linker relocation
+processing</a>.
+</p>
+
+<p>
+My GDB contributions include a fix to the MSP430 simulator&rsquo;s execution of
+<a href="https://sourceware.org/git/?p=binutils-gdb.git;a=commitdiff;h=e8a387fb5f91cdb9674f19703c0e7bfbaf895a84">hardware multiplication routines</a>.
+</p>
+
+<p>
+My Newlib contributions include the implementation of a <a href="https://sourceware.org/git/?p=newlib-cygwin.git;a=commitdiff;h=1e6c561d48ff8bc34683f763f168ee244af53c88">reduced code-size &ldquo;tiny
+printf&rdquo;</a> for MSP430, refactoring libm to <a href="https://sourceware.org/git/?p=newlib-cygwin.git;a=commitdiff;h=b14a879d85b171960df789ac8ba2332004f838e0">remove legacy math library
+configurations</a>, and optimization of the <a href="https://sourceware.org/git/?p=newlib-cygwin.git;a=commitdiff;h=f811485ffb78286929cd555d65bb70b8cac51c0c">MSP430 CRT library</a>.
+</p>
 </div>
 </div>
 <div id="outline-container-org26f37d5" class="outline-2">
 <h2 id="org26f37d5">Technical Writing</h2>
 <div class="outline-text-2" id="text-org26f37d5">
+<hr>
+<p>
+As part of my work on the MSP430-GCC project, I maintained the <a href="https://www.ti.com/lit/pdf/SLAU646">MSP430-GCC User&rsquo;s
+Guide</a>. Active monitoring of the TI e2e forums gave me a good idea of issues
+faced by users, and common questions, which helped me to identify
+functionality that needed better documentation. I added
+&ldquo;Section 5 - MSP430-GCC Features&rdquo;, which describes the unique features of the
+toolchain in detail, and helps users make the most of the available
+optimizations.
+</p>
+
+<p>
+One of the most significant tasks assigned by Texas Instruments was not directly
+related to the MSP430-GCC project. TI tasked me with adapting an ELF extension
+developed for their proprietary ARM toolchain, so it could be upstreamed into
+the GNU toolchain. The extension was called &ldquo;Symbol Meta-Information&rdquo;, and was
+intended to enable new types of information to be described about ELF symbols
+and propagated between toolchain components.
+</p>
+
+<p>
+I developed a proposal (<a href="https://01703124353399199694.googlegroups.com/attach/129816c2a37d9/elf-symbol-meta-information-proposal.pdf?part=0.2&amp;vt=ANaJVrFxpXtCSYptvQdsf-p-Hp1lRYIMWtX9vAn8SF0w2IcWOiZ9UNjmKjueWX-N-1eLPtQV80D5ZOX4fXwRh-k5xwHq1JCJ62OIUUYX9acqeeDPBXNZAns">PDF</a>) and technical specification (<a href="https://01703124353399199694.googlegroups.com/attach/129816c2a37d9/elf-symbol-meta-information-implementation.pdf?part=0.1&amp;vt=ANaJVrEDjBXgHMW4SExBMPFz1Asfdur4chqT718LcPAhyYaJdEnSI20CW2qWkEevHsTL4d0qRK-m_hg2nk3dZF0j2VPNF2nBf8VDsLcgXn1QHaeX0jWAQiM">PDF</a>), but the
+functionality was ultimately rejected by the upstream community. However, the
+whole process was a valuable experience, from writing the proposal and
+discussing it upstream, to learning the importance of RFCs in keeping the
+upstream community abreast of significant out-of-tree development work. It also
+solidifed my understanding of the value in breaking large changes down into
+smaller parts, to make it easier to understand their impact on the broader
+ecosystem.
+</p>
+
+<p>
+To address the key requirement of one of the Symbol Meta-Information types, I
+developed a new ELF section flag, called SHF_GNU_RETAIN. After writing a new
+proposal and <a href="https://sourceware.org/pipermail/gnu-gabi/2020q3/000429.html">submitting a new RFC upstream</a>, this flag was accepted as a GNU
+extension to the ELF ABI. I <a href="https://sourceware.org/git/?p=binutils-gdb.git;a=commitdiff;h=99fabbc9739a87ba3433e66792e93b773896790e">implemented it in Binutils</a>, and it now facilitates
+the C/C++ &ldquo;retain&rdquo; attribute available in GCC and LLVM/Clang.
+</p>
 </div>
-<div id="outline-container-org723bf55" class="outline-3">
-<h3 id="org723bf55">ELF Extension - SHF_GNU_RETAIN - <a href="https://sourceware.org/pipermail/gnu-gabi/2020q3/000429.html">RFC/Specification</a></h3>
-<div class="outline-text-3" id="text-org723bf55">
-<ul class="org-ul">
-<li>SHF_GNU_RETAIN is a new ELF symbol flag I designed and implemented in GNU Binutils. It was
-integrated upstream as a GNU extension to the ELF ABI, and facilitates the C/C++
-&ldquo;retain&rdquo; attribute now available in GCC and LLVM/Clang.</li>
-</ul>
 </div>
-</div>
-<div id="outline-container-org1b1b8a2" class="outline-3">
-<h3 id="org1b1b8a2"><a href="https://www.ti.com/lit/pdf/SLAU646">MSP430-GCC User&rsquo;s Guide</a></h3>
-<div class="outline-text-3" id="text-org1b1b8a2">
-<ul class="org-ul">
-<li>I enhanced many parts of the MSP430-GCC User&rsquo;s Guide during my time working on
-the project.</li>
-<li>I added &ldquo;Section 5 - MSP430-GCC Features&rdquo;, which describes the unique features
-of the toolchain in detail, and helps users make the most of
-the available optimizations.</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org0263293" class="outline-3">
-<h3 id="org0263293">ELF Extension - Symbol Meta-information - <a href="https://01703124353399199694.googlegroups.com/attach/129816c2a37d9/elf-symbol-meta-information-proposal.pdf?part=0.2&amp;vt=ANaJVrFxpXtCSYptvQdsf-p-Hp1lRYIMWtX9vAn8SF0w2IcWOiZ9UNjmKjueWX-N-1eLPtQV80D5ZOX4fXwRh-k5xwHq1JCJ62OIUUYX9acqeeDPBXNZAns">Proposal</a> and <a href="https://01703124353399199694.googlegroups.com/attach/129816c2a37d9/elf-symbol-meta-information-implementation.pdf?part=0.1&amp;vt=ANaJVrEDjBXgHMW4SExBMPFz1Asfdur4chqT718LcPAhyYaJdEnSI20CW2qWkEevHsTL4d0qRK-m_hg2nk3dZF0j2VPNF2nBf8VDsLcgXn1QHaeX0jWAQiM">ELF Implementation Details</a></h3>
-<div class="outline-text-3" id="text-org0263293">
-<ul class="org-ul">
-<li>I collaborated with Texas Instruments to adapt an ELF extension they had developed, so
-that it could be integrated into the upstream GNU toolchain.</li>
-<li>This ELF extension wasn&rsquo;t accepted upstream, but the whole process was a valuable
-learning experience, from writing the proposal and developing the technical
-specification, to engaging in the upstream mailing list discussions about the proposal.</li>
-<li>I subsequently broke the specification into smaller parts, and upstreamed the
-functionality as separate features. SHF_GNU_RETAIN was one of those features.</li>
-</ul>
-</div>
-</div>
-</div>
+<br>
+<br>
+<br>
+<br>
 </div>
 </body>
 </html>

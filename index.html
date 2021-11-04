@@ -189,7 +189,8 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
 </style>
-<link rel="stylesheet" type="text/css" href="resume.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="main.css"/>
 </head>
 <body>
@@ -205,15 +206,12 @@
 <col  class="org-left">
 
 <col  class="org-left">
-
-<col  class="org-left">
 </colgroup>
 <tbody>
 <tr>
 <td class="org-left"><a href="index.html">Resume</a></td>
 <td class="org-left"><a href="portfolio.html">Portfolio</a></td>
 <td class="org-left"><a href="mailto:jozef.lawrynowicz@gmail.com">jozef.lawrynowicz@gmail.com</a></td>
-<td class="org-left"><a href="Jozef_Lawrynowicz_Resume.pdf">PDF Resume</a></td>
 </tr>
 </tbody>
 </table>
@@ -251,35 +249,25 @@
 <h3 id="org4779967">MSP430-GCC - C/C++, Bash, Python, MSP430 Asm</h3>
 <div class="outline-text-3" id="text-org4779967">
 <ul class="org-ul">
-<li>Led the development effort for the MSP430 GNU C/C++ toolchain, delivering
-new releases to Texas Instruments for distribution to thousands of software
-developers</li>
-<li>Optimized instruction selection in the MSP430 compiler backend, by analyzing generated
-code from benchmark applications, resulting in an average performance
-improvement of 10%</li>
-<li>Implemented a compiler cost model for describing the relative costs of
-operations for the MSP430 target, reducing code size by up to 12%</li>
-<li>Enhanced the MSP430-specific C runtime libraries, by increasing the utilization of
-hardware multiply capabilities, and optimizing the CRT startup
-procedure, resulting in an average code size reduction of 8%</li>
-<li>Designed and implemented the SHF_GNU_RETAIN ELF symbol flag, which was
-integrated into the upstream GNU and LLVM toolchains</li>
+<li>Optimized instruction selection in the MSP430 compiler backend, identifying
+optimization opportunities by analyzing generated code from benchmarks,
+improving performance by 10%</li>
+<li>Developed a new target data model to eliminate the penalty of addressing data in
+the large code model, reducing code size by 6%</li>
+<li>Implemented a compiler cost model to improve intermediate code generation,
+using data from MSP430 CPU reference manuals to steer the model, reducing code
+size by 5%</li>
+<li>Enhanced the MSP430 runtime libraries, by increasing the utilization of
+hardware multiply capabilities, and optimizing the CRT startup procedure,
+reducing code size by 8%</li>
+<li>Designed and implemented the SHF_GNU_RETAIN ELF section flag, facilitating the
+implementation of the &ldquo;retain&rdquo; attribute in the upstream GNU and LLVM
+toolchains</li>
+<li>Worked with stakeholders and cross-discipline teams to ensure robust
+integration of MSP430-GCC into new releases of the Code Composer
+Studio IDE, used by 100,000+ developers</li>
 <li>Collaborated with the upstream GNU toolchain community, contributing over
-150 patches to the open source GCC, Binutils, GDB and Newlib projects, adding new
-features, improvements and bug fixes</li>
-<li>Created validation and benchmark reports for each release,
-assuring stakeholders of release quality with quantitative metrics</li>
-<li>Prepared design documents for stakeholders, describing how toolchain benchmark
-targets were going to be met, increasing confidence in the accuracy of time
-estimates for the associated tasks</li>
-<li>Collaborated with cross-discipline teams, to maintain ABI compatibility
-between toolchains, and ensure robust integration of MSP430-GCC into the Code
-Composer Studio IDE</li>
-<li>Implemented a cross-platform continuous integration system using Buildbot,
-targeting Linux, Windows and macOS platforms, significantly reducing time
-spent on manual testing, benchmarking, and packaging tasks</li>
-<li>Maintained user&rsquo;s guide documentation, and provided technical support directly
-to customers</li>
+150 patches to the open source GCC, Binutils, GDB and Newlib projects</li>
 </ul>
 </div>
 </div>
@@ -304,12 +292,13 @@ to customers</li>
 <h3 id="orgcd97087">Somnium DRT ARM Cortex-M Development Tools - C, Bash, Python, ARM Asm</h3>
 <div class="outline-text-3" id="text-orgcd97087">
 <ul class="org-ul">
-<li>Implemented a function reordering linker optimization, delivering performance
+<li>Developed a function reordering linker optimization, to identify hot
+functions and improve their cache behavior, delivering performance
 improvements of up to 15%</li>
-<li>Implemented an Eclipse IDE plugin to diagnose ARM CPU faults during
+<li>Implemented an Eclipse IDE plugin to automatically diagnose ARM CPU faults during
 debugging sessions, improving developer productivity</li>
-<li>Presented product capabilities at technology conferences (ARM TechCon, NXP FTF
-and Embedded World)</li>
+<li>Delivered personalized product demos at technology conferences (ARM TechCon,
+NXP FTF and Embedded World), securing dozens of high-quality leads</li>
 </ul>
 </div>
 </div>
@@ -317,10 +306,11 @@ and Embedded World)</li>
 <h3 id="orgec60cab">MSP430-GCC - C, Bash, Python, MSP430 Asm</h3>
 <div class="outline-text-3" id="text-orgec60cab">
 <ul class="org-ul">
-<li>Managed requirements for new product releases, delegating tasks to
-colleagues according to their skill sets</li>
 <li>Implemented a GNU linker feature to optimize section placement between non-homogeneous
-memory regions, improving memory utilization for space-constrained devices</li>
+memory regions, maximizing memory utilization and improving developer velocity</li>
+<li>Developed functionality for the CPU and hardware multiply capabilities of
+specific devices to be read from an external file, enabling support for new
+devices to be added without toolchain rebuilds</li>
 </ul>
 </div>
 </div>
@@ -345,11 +335,10 @@ memory regions, improving memory utilization for space-constrained devices</li>
 </tbody>
 </table>
 <ul class="org-ul">
-<li>Planned improvements to MSP430 support, by analyzing the state of the MSP430
-backend, using knowledge of the MSP430 ISA to prioritize tasks
-according to their expected impact on code generation</li>
-<li>Implemented initial MSP430X CPU support, adding new instructions to reduce code
-size and improve performance, for shift operations and function prologue/epilogue code</li>
+<li>Implemented initial MSP430X CPU support, enabling Clang to infer the
+CPU type for specific devices, simplifying option specification for users</li>
+<li>Added code generation and assembler support for MSP430X shift and push/pop
+instructions, reducing code size by 4%</li>
 </ul>
 </div>
 </div>
@@ -368,7 +357,7 @@ size and improve performance, for shift operations and function prologue/epilogu
 <tbody>
 <tr>
 <td class="org-left"><b>University of Bristol</b></td>
-<td class="org-right">Sep 2012 &#x2013; May 2015 (Bristol, UK)</td>
+<td class="org-right">May 2015 (Bristol, UK)</td>
 </tr>
 </tbody>
 </table>
