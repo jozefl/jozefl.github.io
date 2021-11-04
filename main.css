@@ -1,5 +1,5 @@
 /* A4 width is 21cm.  */
-body { font-family: "Roboto", "Helvetica", sans-serif; font-size: 11pt;  max-width: 18cm; margin-left: auto; margin-right: auto; }
+body { font-family: "Roboto", "Helvetica", sans-serif; font-size: 11pt;  max-width: 18cm; margin-left: auto; margin-right: auto; padding-left: 6px; padding-right: 6px; }
 
 table.navbar td { padding-left: 10px; padding-right: 10px; font-weight: normal; }
 table.navbar { font-size: 12pt; width: 10%; margin-left: auto; margin-right: auto; white-space: nowrap; }
@@ -11,7 +11,7 @@ ul { font-size: 11pt; font-weight: normal; margin-top: 0em; margin-bottom: 0em; 
 li { padding-left: 0px; padding-top: 2px }
 hr { margin-top: 2px; margin-bottom: 4px; }
 
-h2 { font-size: 15pt; margin-top: 8px; margin-bottom: 0px; margin-top: 15px; }
+h2 { font-size: 15pt; margin-bottom: 0px; margin-top: 15px; }
 h3 { font-size: 11pt; font-weight: normal; margin-top: 4px; margin-bottom: 4px; }
 h4 { font-size: 11pt; font-weight: normal; margin-top: 0.0em; margin-bottom: 0.0em; }
 
