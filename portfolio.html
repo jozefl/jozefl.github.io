@@ -194,6 +194,9 @@
 <link rel="stylesheet" type="text/css" href="main.css"/>
 </head>
 <body>
+<div id="preamble" class="status">
+<link rel="import" href="nav.html"/>
+</div>
 <div id="content" class="content">
 <h1 class="title">Jozef Lawrynowicz</h1>
 
@@ -223,8 +226,8 @@
 I founded Mitto Systems in January 2018, and through this company worked on the
 Texas Instruments <a href="https://www.ti.com/tool/MSP430-GCC-OPENSOURCE">MSP430-GCC project</a>, a downstream fork of the MSP430 GNU
 toolchain. Over the 3 years I led the project, I delivered 9 releases to TI,
-spanning GCC versions 7 to 9. Each release of MSP430-GCC was available alongside
-the TI toolchain in the Code Composer Studio IDE, and also available standalone.
+spanning GCC versions 7 to 9. Each release of MSP430-GCC was available
+standalone or alongside the TI toolchain in the Code Composer Studio IDE.
 </p>
 
 <p>
@@ -244,7 +247,7 @@ EEMBC CoreMark score, increased by 10%.
 
 <p>
 I used Git subtrees to manage the downstream toolchain in a single repository,
-enabling different versions of the toolchain components to be maintained, and
+enabling specific versions of each toolchain component to be maintained, and
 pulled in the latest upstream releases as required.
 </p>
 
@@ -254,7 +257,7 @@ package the toolchain for Windows, macOS and Linux.
 </p>
 
 <p>
-I contributed over 150 patches upstream, across the open source GNU toolchain,
+I contributed over 150 patches upstream to the open source GNU toolchain,
 adding new features, fixing bugs and improving MSP430 code generation across
 all the toolchain components.
 </p>
@@ -278,9 +281,9 @@ supported by specific MSP430 MCUs</li>
 
 <p>
 My GCC contributions include improvements to <a href="https://gcc.gnu.org/git/?p=gcc.git;a=commitdiff;h=a0a9a3fc22d4d4a38c1d6a31669c926734308745">instruction selection in the MSP430
-backend</a>, development of <a href="https://gcc.gnu.org/git/?p=gcc.git;a=commitdiff;h=8682b1a508e5ba9bd2e1b2b4d298bf7d07a37f80">a new MSP430 data model</a> and the implementation of
-<a href="https://gcc.gnu.org/git/?p=gcc.git;a=commitdiff;h=0fcc78f79e85b816480e0425cc8d7c496e739e88">highly-optimized MSP430 assembly code library routines</a> for performing 64-bit
-multiplication.
+backend</a>, development of <a href="https://gcc.gnu.org/git/?p=gcc.git;a=commitdiff;h=8682b1a508e5ba9bd2e1b2b4d298bf7d07a37f80">a new MSP430 data model</a>, and the implementation of
+highly-optimized MSP430 assembly code library routines for performing 64-bit
+<a href="https://gcc.gnu.org/git/?p=gcc.git;a=commitdiff;h=0fcc78f79e85b816480e0425cc8d7c496e739e88">shifts</a> and <a href="https://gcc.gnu.org/git/?p=gcc.git;a=commitdiff;h=bf7b94d40739428fda3d798b4add833054f7d012">multiplication</a>.
 </p>
 
 <p>
