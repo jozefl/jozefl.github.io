@@ -5,7 +5,7 @@ table.navbar td { padding-left: 10px; padding-right: 10px; font-weight: normal; 
 table.navbar { font-size: 12pt; width: 10%; margin-left: auto; margin-right: auto; white-space: nowrap; }
 table, td, th { text-align: center; padding-left: 0px; padding-right: 0px; }
 table { font-size: 12pt; margin-top: 0.5em; }
-table a:visited, a:link { color: blue; }
+table.navbar a:visited, a:link { color: blue; }
 
 ul { font-size: 11pt; font-weight: normal; margin-top: 0em; margin-bottom: 0em; padding-left: 17px; padding-right: 0px }
 li { padding-left: 0px; padding-top: 2px }

@@ -218,6 +218,33 @@
 </tr>
 </tbody>
 </table>
+<div id="outline-container-org9853bc8" class="outline-2">
+<h2 id="org9853bc8">Quick Links</h2>
+<div class="outline-text-2" id="text-org9853bc8">
+<hr>
+<table width="100%" frame="void" cellpadding="3">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left"><a href="https://github.com/jozefl/msp430-llvm">MSP430-LLVM</a></td>
+<td class="org-left"><a href="https://gcc.gnu.org/git/?p=gcc.git;a=search;h=HEAD;s=Jozef+Lawrynowicz;st=author">All GCC Commits</a></td>
+<td class="org-left"><a href="https://sourceware.org/git/?p=binutils-gdb.git;a=search;h=HEAD;s=Jozef+Lawrynowicz;st=author">All Binutils/GDB Commits</a></td>
+<td class="org-left"><a href="https://sourceware.org/git/?p=newlib-cygwin.git;a=search;h=HEAD;s=Jozef+Lawrynowicz;st=author">All Newlib Commits</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div id="outline-container-org0adebe8" class="outline-2">
 <h2 id="org0adebe8">Mitto Systems and MSP430-GCC</h2>
 <div class="outline-text-2" id="text-org0adebe8">
@@ -231,9 +258,9 @@ standalone or alongside the TI toolchain in the Code Composer Studio IDE.
 </p>
 
 <p>
-The goals of the project were to keep the toolchain up to date with
-the latest versions of upstream GCC, Binutils, and GDB, whilst improving code
-generation, with a focus on reducing the size of generated code. Regular contact
+The goals of the project were to improve code generation, with a focus on
+reducing the size of generated code, whilst keeping the toolchain up to date
+with the latest versions of upstream GCC, Binutils, and GDB. Regular contact
 with customers on the TI e2e forums helped me stay up to date with issues faced
 by them, helping to prioritize tasks for releases.
 </p>
@@ -243,23 +270,6 @@ Code generation improvements and optimizations across the compiler,
 linker and runtime libraries delivered an average code size reduction
 of 35%, achieved with the final release. Performance, as measured by
 EEMBC CoreMark score, increased by 10%.
-</p>
-
-<p>
-I used Git subtrees to manage the downstream toolchain in a single repository,
-enabling specific versions of each toolchain component to be maintained, and
-pulled in the latest upstream releases as required.
-</p>
-
-<p>
-I built a CI system using Buildbot, to automatically build, test, benchmark and
-package the toolchain for Windows, macOS and Linux.
-</p>
-
-<p>
-I contributed over 150 patches upstream to the open source GNU toolchain,
-adding new features, fixing bugs and improving MSP430 code generation across
-all the toolchain components.
 </p>
 </div>
 </div>
