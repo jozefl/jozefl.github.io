@@ -15,4 +15,5 @@ h2 { font-size: 15pt; margin-bottom: 0px; margin-top: 15px; }
 h3 { font-size: 11pt; font-weight: normal; margin-top: 4px; margin-bottom: 4px; }
 h4 { font-size: 11pt; font-weight: normal; margin-top: 0.0em; margin-bottom: 0.0em; }
 
+p.mainsummary { text-align: center; margin-top: 0.5em; margin-bottom: 0.5em; font-size: 12pt; }
 p.summary { padding-left: 0px; padding-top: 2px; padding-bottom: 2px; margin-top: 0px; margin-bottom: 0px }
